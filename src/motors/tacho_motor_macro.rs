@@ -430,12 +430,12 @@ macro_rules! tacho_motor {
 
         /// Returns the proportional pub constant for the speed regulation PID.
         pub fn get_speed_pid_kp(&self) -> Ev3Result<f32> {
-            self.get_attribute("speed_pid_kp").get()
+            self.get_attribute("speed_pid/Kp").get()
         }
 
         /// Sets the proportional pub constant for the speed regulation PID.
         pub fn set_speed_pid_kp(&self, kp: f32) -> Ev3Result<()> {
-            self.get_attribute("speed_pid_kp").set(kp)
+            self.get_attribute("speed_pid/Kp").set(kp)
         }
 
         /// Returns the integral pub constant for the speed regulation PID.
